@@ -1,5 +1,5 @@
 # box86-termux (WIP)
-Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian). This repository has a script and instructions for installing and using box86 in Termux using proot, not chroot(because I have not yet been able to get termux-x11 to work in chroot and not every user has root rights), even with graphics acceleration for Adreno GPU.
+Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian). This repository instructions for installing and using box86 in Termux using proot, not chroot(because I have not yet been able to get termux-x11 to work in chroot and not every user has root rights), even with graphics acceleration for Adreno GPU.
 ### Progressbar
 - [x] Wine
 - [x] Xwayland(Termux-x11)
