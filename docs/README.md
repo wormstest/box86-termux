@@ -14,4 +14,8 @@ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, 
 - [Worms Armageddon gameplay](https://www.youtube.com/watch?v=OwUfBx2Tbh8)
 ### Installation instructions
 - In process
-
+### Credits
+- [ptitSeb](https://github.com/ptitSeb): for [box86](https://github.com/ptitSeb/box86)
+- [alexvorxx](https://github.com/alexvorxx): for [Zink-Mesa-Xlib](https://github.com/alexvorxx/Zink-Mesa-Xlib)
+- [Termux](https://github.com/termux) developers: for [termux-x11](https://github.com/termux/termux-x11)
+- [Play on Linux](https://www.playonlinux.com) developers: for [Wine binaries](https://www.playonlinux.com/wine)
