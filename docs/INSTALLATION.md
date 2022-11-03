@@ -71,6 +71,10 @@ Install required dependencies to build Mesa and git clone all required Mesa repo
 
 `root@localhost:~# apt build-dep mesa -y && git clone https://github.com/mesa3d/mesa && git clone https://github.com/alexvorxx/Zink-Mesa-Xlib`
 
+Paste drm and drm_mode.h to /usr/include:
+
+`root@localhost:~# cp /usr/include/libdrm/drm.h /usr/include/libdrm/drm_mode.h /usr/include`
+
 Compile Mesa:
 
 `root@localhost:~# cd mesa && $ meson build -D platforms=x11,wayland -D gallium-drivers=swrast,virgl,zink -D vulkan-drivers=freedreno -D dri3=enabled  -D egl=enabled  -D gles2=enabled -D glvnd=true -D glx=dri  -D libunwind=disabled -D osmesa=true  -D shared-glapi=enabled -D microsoft-clc=disabled  -D valgrind=disabled --prefix /usr -D gles1=enabled -D freedreno-kgsl=true && ninja -C build install`
