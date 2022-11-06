@@ -22,6 +22,10 @@ Set property allow-external-apps to true in ~/.termux/termux.properties:
 
 `~ $ echo 'allow-external-apps = true' >> ~/.termux/termux.properties && termux-reload-settings`
 
+Export XDG_RUNTIME_DIR:
+
+`~ $ export XDG_RUNTIME_DIR=${TMPDIR}`
+
 Start termux-x11:
 
 `~ $ termux-x11 :1 &`
