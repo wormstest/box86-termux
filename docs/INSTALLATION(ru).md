@@ -25,7 +25,7 @@
 
 Экспортируйте XDG_RUNTIME_DIR:
 
-`export XDG_RUNTIME_DIR=${TMPDIR}`
+`~ $ export XDG_RUNTIME_DIR=${TMPDIR}`
 
 Запустите termux-x11:
 
