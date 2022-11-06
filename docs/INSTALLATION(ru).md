@@ -2,14 +2,14 @@
 ### Системные требования
 - Любой ARMv8 процессор
 - 8-10 ГБ свободного места
-- Для использования аппаратного ускорения OpenGL требуется графический процессор Adreno 616+ (полный список поддерживаемых графических процессоров можно найти [здесь](https://www.exagear.wiki/index.php?title=Turnip#Supported_GPUs)
+- Для использования аппаратного ускорения OpenGL требуется графический процессор Adreno 616+ (полный список поддерживаемых графических процессоров можно найти [здесь](https://www.exagear.wiki/index.php?title=Turnip#Supported_GPUs))
 ### Установка 32 битного Termux и настройка Termux-x11
-Поскольку для работы box86 требуется 32-битная система, вам нужен 32-битный [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_armeabi -v7a.apk). Мы также будем использовать Xwayalnd([Termux-x11](https://github.com/termux/termux-x11/suites/8768393687/artifacts/397664936)). Установите apk Termux и распакуйте .zip файл termux-x11. После этого установите apk termux-x11 и не удаляйте архив (.deb
+Поскольку для работы box86 требуется 32-битная система, вам нужен 32-битный [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_armeabi-v7a.apk). Мы также будем использовать Xwayalnd([Termux-x11](https://github.com/termux/termux-x11/actions/workflows/debug_build.yml)). Установите apk Termux и распакуйте .zip файл termux-x11. После этого установите apk termux-x11 и не удаляйте архив (.deb
 файл termux-x11 пригодится в будущем).
 
 Перейдите в Termux и напишите следующие команды:
 
-`~ $ termux-setup-storage`(для доступа к памяти устройка)
+`~ $ termux-setup-storage`(для доступа к памяти устройства)
 
 `~ $ pkg update -y` (Обновление репозитория, если у вас возникнут вопросы о изменении файла openssl.cnf, просто нажмите Enter на клавиатуре)
 
@@ -22,6 +22,10 @@
 Установите значение "allow-external-apps = true" в ~/.termux/termux.properties:
 
 `~ $ echo 'allow-external-apps = true' >> ~/.termux/termux.properties && termux-reload-settings`
+
+Экспортируйте XDG_RUNTIME_DIR:
+
+`export XDG_RUNTIME_DIR=${TMPDIR}`
 
 Запустите termux-x11:
 
