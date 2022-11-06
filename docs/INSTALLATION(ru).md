@@ -29,7 +29,7 @@
 
 Запустите termux-x11:
 
-`~ $ termux-x11:1 &`
+`~ $ termux-x11: 1 &`
 
 После открытия приложения его можно закрыть.
 
@@ -51,7 +51,7 @@
 
 После входа в Ubuntu обновите репозиторий и пакеты:
 
-`root@localhost:~# подходящее обновление && подходящее обновление -y`
+`root@localhost:~# apt update && apt upgrade -y`
 
 Установите пакеты для сборки box86:
 
@@ -59,16 +59,16 @@
 
 ...и склонируйте и собрать box86 с помощью Dynarec:
 
-`root@localhost:~# git clone https://github.com/ptitSeb/box86 && cd box86 && mkdir build; сборка компакт-диска; cmake .. -DARM_DYNAREC=1 && make && make install`
+`root@localhost:~# git clone https://github.com/ptitSeb/box86 && cd box86 && mkdir build; cd build; cmake .. -DARM_DYNAREC=1 && make && make install`
 
-После компиляции вы можете удалить каталог box86:
+После компиляции вы можете удалить папку box86:
 
 `root@locahost:~/box86/cmake# cd .. && rm -r box86`
 
 #### Компиляция драйверов Adreno Turnip и Zink
 Теперь мы можем скомпилировать драйверы Adreno Turnip+Zink для аппаратного ускорения OpenGL. Добавьте строку deb-src в /etc/apt/sources.list:
 
-`root@localhost:~# echo "deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http://ports.ubuntu.com/ubuntu-ports основная вселенная jammy мультивселенная" >> /etc/apt/sources.list`
+`root@localhost:~# echo "deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http://ports.ubuntu.com/ubuntu-ports jammy main universe multiverse" >> /etc/apt/sources.list`
 
 ... и запустите `apt update`.
 
